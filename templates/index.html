@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Lista de Tarefas </title>
+</head>
+<body>
+    <h1>Bem-vindo á minha Lista de Tarefas</h1>
+
+    <form method="POST">
+        <input type="text" name="tarefa" placeholder="Digite uma nova tarefa" required>
+        <button type="submit">Adicionar</button>
+    </form>
+
+    <ul>
+        {% for tarefa in tarefas %}
+            <li>{{ tarefa }}</li>
+        {% endfor %}    
+    </ul>
+</body>
+</html>
